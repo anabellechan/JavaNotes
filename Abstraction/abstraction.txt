@@ -1,0 +1,16 @@
+**INTERFACE IS ONE EXAMPLE OF ABSTRACTION**
+Abstraction helps us hide implementation complexity
+
+Java supports abstract classes or interfaces
+it's easier to contribute to abstract systems
+An abstract class is almost like a template class where some of the fuctionality
+is not implemented yet
+Other classes extend the abstract class and implement the appropriate functionality
+
+Interface in Java
+an interface is a set of method signatures for to-be-implemented functionality
+It's a specification for a set of behaviors without implementation
+An interface cannot be instantiated
+
+A class should only have a single responsibility in a system.
+

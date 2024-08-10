@@ -1,0 +1,23 @@
+***USES THE WORD EXTENDS***
+Reduce Code Duplication
+
+Subclass
+-Inherits properties
+-Referred to as the child class
+
+Superclass
+-Is inherited from
+-Referred to as the parent class
+
+Benefits of Inheritance
+-Avoid duplicating code in two different places
+-Additions or modifications to the superclass will automatically affect
+all subclasses
+
+Is-A Relationship
+-You have employee class as parent class
+-The salesperson is an Employee
+-But not all Employee instances are salespersons
+
+Inheritance promotes code reusability and scalability
+

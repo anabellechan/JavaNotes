@@ -1,0 +1,93 @@
+1. interface
+An interface in Java is an abstract type that is used to specify a set of methods that a class must implement. 
+Interfaces are a way to ensure that certain classes provide specific behavior, and they are crucial for defining contracts within your software architecture.
+
+When to use:
+When you have different classes which should adhere to a certain contract or protocol of 
+behavior but potentially have very different internal implementations.
+When you want to specify the behavior of a particular data type, 
+but are not concerned about who implements its behavior.
+When you need to define multiple unrelated classes that can perform the same action 
+(i.e., different classes that should have a common set of methods).
+
+public interface Animal {
+    void eat();
+    void move();
+}
+
+2. extends
+The extends keyword in Java is used to indicate that one class is inheriting from another class (the superclass). 
+It is used for extending the functionality of a class.
+
+When to use:
+When one class is a more specific version of another class (e.g., a Dog class that is a specific type of Animal).
+When you want to reuse the functionality from an existing class and possibly override some of its behavior with new functionality.
+When you aim to achieve a hierarchy of classes that represent an "is-a" relationship (a subclass "is a" type of its superclass).
+
+public class Animal {
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void eat() {
+        System.out.println("Dog eats dog food.");
+    }
+}
+
+
+3. implements
+The implements keyword in Java is used by a class to implement an interface. 
+It is used to ensure that the implementing class adheres to a particular contract defined by the interface, 
+meaning the class must provide the implementation of all the methods declared by the interface.
+
+When to use:
+When you want your class to commit to providing implementations for the behavior defined in one or more interfaces.
+When your class needs to adhere to a particular interface but also extend another class.
+When you need to use multiple interfaces with a class because Java does not support multiple inheritance of classes but allows a class to implement multiple interfaces.
+
+Summary
+Use interface when defining a set of methods that different classes should implement.
+Use extends when creating a new class that is a specialized form of an existing class.
+Use implements when a class needs to adopt a specific behavior defined by an interface.
+
+
+Interface Vs. class
+The choice between using an interface and a class in Java revolves around fundamental design intentions and the structural needs of your application. Each serves a different purpose and offers distinct mechanisms for abstraction, encapsulation, and inheritance. Here’s a detailed comparison to clarify their differences and appropriate use cases:
+
+Interface
+An interface in Java is a completely abstract type (prior to Java 8, interfaces couldn't contain implementation code, with the exception of static methods introduced in Java 8 and default methods). Interfaces define a contract or a set of methods that implementing classes must provide. Interfaces are about capabilities like what a class can do.
+
+Key Characteristics:
+
+No State: Interfaces cannot hold state. They can have constants (public static final variables), but they do not maintain state information regarding the behavior they abstract.
+Abstract Methods: Typically, interfaces only declare methods but do not implement them, except for default methods or static methods.
+Multiple Inheritance: In Java, a class can implement multiple interfaces, allowing for a form of multiple inheritance since a class can exhibit the behavior of multiple interfaces.
+Public Methods Only: All methods declared in an interface are inherently public, and they must be implemented as public in any class implementing the interface.
+When to Use:
+
+When you need to define a contract for behaviors that can be shared across multiple classes, regardless of the class's position in the inheritance hierarchy.
+When you want to specify the behavior of a particular data type but are not concerned with who implements its behavior or how it's implemented.
+Class
+A class is a blueprint for creating objects. A class can contain state (fields) and methods to manipulate that state. It encapsulates behavior and state, allowing tight coupling between what an object can do and the data it manipulates.
+
+Key Characteristics:
+
+State and Behavior: Classes can define both state (fields) and behavior (methods), and they can instantiate objects (stateful entities).
+Inheritance: Classes support inheritance but only allow single inheritance. That is, a class can only inherit from one superclass.
+Encapsulation: Classes allow encapsulation of data. Access modifiers (public, private, protected) control the visibility of class members to outside classes.
+When to Use:
+
+When you need to define both the characteristics of a type and the implementation of its behaviors.
+When you need a blueprint for creating multiple objects that share common properties and methods.
+When you need to extend a base class, inheriting its properties and methods while potentially overriding some and adding more.
+
+
+Example Usage
+Imagine you are designing software for an animal shelter which includes behavior like walk(), eat(), and sleep(). 
+You could define an interface AnimalBehavior with these methods, and then have specific classes like Dog and Cat implement these interfaces, defining specific behaviors in each class.
+
+In essence, whether you choose to use an interface or a class will largely depend on whether you need to abstract behavior (interface) 
+or encapsulate data and provide behavior (class). Both are crucial tools in a Java developer’s toolkit and understanding when to use which is fundamental to designing effective Java applications.

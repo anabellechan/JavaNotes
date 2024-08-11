@@ -1,0 +1,34 @@
+1. Single Responsibility Principle (SRP)
+Definition: A class should have one, and only one, reason to change, meaning that a class should have only one job or 
+responsibility.
+Purpose: This principle reduces the complexity of the class by limiting it to a single functionality, 
+which makes the class easier to understand and manage. It also minimizes the impact of changes, 
+as changes to one responsibility will not affect other unrelated functionalities.
+
+2. Open/Closed Principle (OCP)
+Definition: Software entities (classes, modules, functions, etc.) should be open for extension, 
+but closed for modification.
+Purpose: This principle encourages the design of software that is flexible to change. 
+By designing modules that never change when new functionalities are added, software systems become more robust, 
+less prone to bugs, and comply better with future requirements without risking old functionality.
+
+3. Liskov Substitution Principle (LSP)
+Definition: Objects in a program should be replaceable with instances of their subtypes without altering the 
+correctness of that program.
+Purpose: This principle ensures that a subclass can stand in for its superclass without errors. If the code 
+finds that a derived class cannot function as its base class, it may violate the principle and lead to bugs.
+
+4. Interface Segregation Principle (ISP)
+Definition: Clients should not be forced to depend upon interfaces they do not use.
+Purpose: This principle promotes the segregation (splitting) of large interfaces into smaller, 
+more specific ones so that clients only need to know about the methods that are of interest to them. 
+It helps reduce the side effects of changes and improves code readability and understanding.
+
+5. Dependency Inversion Principle (DIP)
+Definition: High-level modules should not depend on low-level modules. 
+Both should depend on abstractions (e.g., interfaces).
+Purpose: The principle inverts the way some people may think about object-oriented design by suggesting that 
+high-level modules should not depend on low-level modules, but on abstractions. 
+This decouples the high-level modules from the low-level module implementation details, 
+making it easier to modify and maintain the system.
+Applying SOLID Principles

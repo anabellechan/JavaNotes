@@ -1,3 +1,5 @@
+package Accounts;
+
 import java.sql.Timestamp;
 
 public class MissedPaymentEvent implements Event {

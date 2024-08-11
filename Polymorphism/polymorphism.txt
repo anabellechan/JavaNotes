@@ -1,0 +1,10 @@
+Polymorphism
+When you inherit from a parent class to a child class, it is like copy pasting all the methods
+and properties from the parent to the child. However imagine that instead of just copying everything as is,
+you change some parts of the parent class in the process.
+This change happens when you override methods in the child class using @Override method.
+By doing this, the methods in the child class can behave differently than those in the parent class
+As a result, you end up with two versions or forms of the parent class's methods, one from the parent and one of
+the child. This concept of having multiple forms of a class's methods is what we refer to as polymorphism.
+So when you create these different forms of a parent class, you are practicing polymorphism.
+

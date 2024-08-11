@@ -1,3 +1,4 @@
+package FileReader;
 public class DigitsOnlyFileReader extends AbstractFileReader {
 
     public DigitsOnlyFileReader(String filePath) {

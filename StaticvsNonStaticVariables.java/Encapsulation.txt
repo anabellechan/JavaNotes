@@ -1,0 +1,37 @@
+Encapsulation in Java
+Java classes allow us to bind together data
+and related functionality
+We can implement parts of the encapsulation in Java with classes
+Benefits
+Prevent classess from becoming tightly coupled
+Clear pathways for classes to communicate
+Less code changes required for a refactoring change
+
+Encapsulation requires Restriction
+
+We need a clear interface between a given classes and the
+rest of the program
+Everything can't have direct access
+
+How to implement Encapsulation in Java
+Make a class's attributes hidden from other classes
+using encapsulation
+
+To achieve Encapsulation in Java
+Restrict each attribute with the private access modifier
+Write accessible methods to get and set the values of
+each attribute with the public access modifier
+Other classes will access data indirectly through public methods
+
+Using getters such access
+
+Tree myFavMapleTree=new Tree (heightFt:90, trunkInches:30, TreeType.Maple)
+System.out.println(myFavMapleTree.getTreeType());
+System.out.println(myFavMapleTree.getHeightFt());
+System.out.println(myFavMapleTree.gettrunkInches());
+
+myFavMapleTree.heightFt=180;  //HARD CODED VALUE CANNOT WORK
+
+Hence use
+myFavMapleTree.grow(); //to modify through setter or grow methods
+
